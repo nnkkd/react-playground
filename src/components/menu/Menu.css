@@ -1,0 +1,7 @@
+.openedMenu {
+    display: block;
+}
+
+.closedMenu {
+    display: none;
+}
