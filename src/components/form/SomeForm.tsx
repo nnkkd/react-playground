@@ -1,11 +1,14 @@
 import type { UseFormRegister, Path } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 import './SomeForm.scss'
 
-type FormValues = {
-  'string-value': string
-  'number-value': number
-}
+const formValuesSchema = z.object({
+  'string-value': z.string().regex(/^\D+$/),
+  'number-value': z.string().regex(/^\d+$/)
+})
+
+type FormValues = z.infer<typeof formValuesSchema>
 
 type InputProps = {
   label: Path<FormValues>
@@ -21,16 +24,26 @@ const StringValueInput = ({ label, register }: InputProps): JSX.Element => {
   )
 }
 
+const NumberValueInput = ({ label, register }: InputProps): JSX.Element => {
+  return (
+    <>
+      <label>{label}</label>
+      <input {...register(label)}></input>
+    </>
+  )
+}
+
 export const SomeForm = (): JSX.Element => {
   const { register, handleSubmit } = useForm<FormValues>()
   const onSubmit = (data: FormValues) => {
-    alert(JSON.stringify(data))
+    const content = formValuesSchema.parse(data)
+    console.log(content)
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <StringValueInput label='string-value' register={register} />
-      <StringValueInput label='number-value' register={register} />
+      <NumberValueInput label='number-value' register={register} />
       <input type='submit' />
     </form>
   )
