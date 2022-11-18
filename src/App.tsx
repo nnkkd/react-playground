@@ -1,11 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import { Home } from './pages/Home';
-import Page1, { UseStateEffect } from './pages/Page1';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import { Home } from './pages/Home'
+import { UseStateEffect } from './pages/UseStateEffect'
 
-
-function App() {
+function App(): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,8 +13,7 @@ function App() {
         <Route path={'/useState-effect'} element={<UseStateEffect />}></Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
-
+export default App
