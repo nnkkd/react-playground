@@ -1,5 +1,6 @@
 import type { UseFormRegister, Path } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
+import './SomeForm.scss'
 
 type FormValues = {
   'string-value': string
