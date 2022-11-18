@@ -10,7 +10,7 @@ export const UseStateEffect = (): JSX.Element => {
   }, [count, count2])
   return (
     <>
-      <Layout title='toppage'>
+      <Layout title='usestate/effect'>
         <div>
           <Link to={'/'}>go to root</Link>
         </div>
