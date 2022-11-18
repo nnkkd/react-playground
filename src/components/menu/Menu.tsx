@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./Menu.css"
+import "./Menu.scss"
 
 export const Menu = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -10,7 +10,7 @@ export const Menu = () => {
 
     return (
         <div>
-            <button onClick={toggleIsOpen}>button</button>
+            <button className="menuButton" onClick={toggleIsOpen}>menu</button>
             <div className={isOpen ? 'openedMenu' : 'closedMenu'}>                <ul>
                 <li>1</li>
                 <li>2</li>

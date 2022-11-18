@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom"
 import { Layout } from "../components/layouts/Layouts"
+import { useState, useEffect } from "react"
 
-const Page1 = () => {
-    return (<Layout title="About">
-        <main>About Page</main>
-        <Link to={'/'}>go to home</Link>
-    </Layout>
+export const UseStateEffect = () => {
+    const [count, setCount] = useState<number>(0)
+    const [count2, setCount2] = useState<number>(0)
+    useEffect(() => {
+        console.log(count + count2)
+    }, [count, count2])
+    return (<>
+        <Layout title='toppage'>
+            <div>
+                <Link to={'/'}>go to root</Link>
+            </div>
+            <button onClick={() => setCount(count + 1)}>{`count: ${count}`}</button>
+            <button onClick={() => setCount2(count2 + 1)}>{`count: ${count2}`}</button>
+        </Layout>
+    </>
     )
 }
-
-export default Page1
+export default UseStateEffect

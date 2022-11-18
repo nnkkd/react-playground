@@ -3,20 +3,14 @@ import { Layout } from "../components/layouts/Layouts";
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
-    const [count, setCount] = useState<number>(0)
-    const [count2, setCount2] = useState<number>(0)
-    useEffect(() => {
-        console.log(count + count2)
-    }, [count, count2])
-    return (<>
-        <Layout title='toppage'>
-            <div>
-                <Link to={'page1'}>go to page1</Link>
-            </div>
-            <button onClick={() => setCount(count + 1)}>{`count: ${count}`}</button>
-            <button onClick={() => setCount2(count2 + 1)}>{`count: ${count2}`}</button>
-        </Layout>
-    </>
+    return (
+        <>
+            <Layout title='toppage'>
+                <div>
+                    <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
+                </div>
+            </Layout>
+        </>
     )
 }
 
