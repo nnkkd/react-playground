@@ -7,6 +7,7 @@ export const Home = (): JSX.Element => {
       <Layout title='toppage'>
         <div>
           <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
+          <Link to={'/form'}>go to form</Link>
         </div>
       </Layout>
     </>
