@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import './SomeForm.scss'
 
+// バリデーション方法がイケてないかも。
 const formValuesSchema = z.object({
   'string-value': z.string().regex(/^\D+$/),
   'number-value': z.string().regex(/^\d+$/)

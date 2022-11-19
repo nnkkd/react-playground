@@ -4,7 +4,7 @@ import './App.css'
 import { Home } from './pages/Home'
 import { UseStateEffect } from './pages/UseStateEffect'
 import { Form } from './pages/Form'
-import { Todo } from './pages/Todo'
+import { ToDo } from './pages/ToDo'
 function App(): JSX.Element {
   return (
     <BrowserRouter>
@@ -12,7 +12,7 @@ function App(): JSX.Element {
         <Route path={'/'} element={<Home />}></Route>
         <Route path={'/useState-effect'} element={<UseStateEffect />}></Route>
         <Route path={'/form'} element={<Form />}></Route>
-        <Route path={'/todo'} element={<Todo />}></Route>
+        <Route path={'/todo'} element={<ToDo />}></Route>
       </Routes>
     </BrowserRouter>
   )

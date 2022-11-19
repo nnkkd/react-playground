@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Layout } from '../components/layouts/Layouts'
+import './Home.scss'
 
 export const Home = (): JSX.Element => {
   return (
@@ -8,6 +9,7 @@ export const Home = (): JSX.Element => {
         <div>
           <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
           <Link to={'/form'}>go to form</Link>
+          <Link to={'/todo'}>go to todo</Link>
         </div>
       </Layout>
     </>
