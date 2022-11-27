@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Menu.scss'
+import { Link } from 'react-router-dom'
 
 export const Menu = (): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -9,20 +10,29 @@ export const Menu = (): JSX.Element => {
     }
 
     return (
-        <div>
-            <button className='menuButton' onClick={toggleIsOpen}>
-                menu
-            </button>
-            <div className={isOpen ? 'openedMenu' : 'closedMenu'}>
-                {' '}
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
+        <>
+            <div className='menu-area'>
+                <button className='menu-button' onClick={toggleIsOpen}>
+                    menu
+                </button>
+
+                <div className={isOpen ? 'opened-menu' : 'closed-menu'}>
+                    <ul>
+                        <li>
+                            <Link to={'/'}>go to root</Link>
+                        </li>
+                        <li>
+                            <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
+                        </li>
+                        <li>
+                            <Link to={'/form'}>go to form</Link>
+                        </li>
+                        <li>
+                            <Link to={'/todo'}>go to todo</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </>
     )
 }

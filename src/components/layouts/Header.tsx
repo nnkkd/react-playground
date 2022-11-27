@@ -1,13 +1,13 @@
 import logo from '../../logo.svg'
-import '../../App.css'
+import './Header.scss'
 import { Menu } from '../menu/Menu'
 
 export const Header = (): JSX.Element => {
     return (
         <header className='App-header'>
+            <Menu />
             <img src={logo} className='App-logo' alt='logo' />
             this is header
-            <Menu />
         </header>
     )
 }
