@@ -14,21 +14,17 @@
 }
 
 
-.App-footer {
-  background: #282c34;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 
 
 .App-header {
+  display: flex;
   background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.header-content {
+  size: 10vmin;
 }
 
 .App-link {
