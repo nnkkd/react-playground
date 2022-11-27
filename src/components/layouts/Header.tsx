@@ -1,15 +1,15 @@
-import logo from '../../logo.svg';
-import '../../App.css';
-import { Menu } from '../menu/Menu';
+import logo from '../../logo.svg'
+import './Header.scss'
+import { Menu } from '../menu/Menu'
 
-export const Header = () => {
-
+export const Header = (): JSX.Element => {
     return (
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            this is header
+        <header className='App-header'>
             <Menu />
-        </header>)
+            <img src={logo} className='App-logo' alt='logo' />
+            this is header
+        </header>
+    )
 }
 
 // footerの作成

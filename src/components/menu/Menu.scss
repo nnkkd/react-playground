@@ -1,7 +1,18 @@
-.openedMenu {
-    display: block;
+
+
+.closed-menu {
+    display: none;
 }
 
-.closedMenu {
-    display: none;
+.menu-button {
+    height: 10vmin;
+}
+
+.menu-area {
+    display: block;
+    .opened-menu {
+        display: block;
+        position: absolute;
+        background-color: #282c34;
+    }
 }
