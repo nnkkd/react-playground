@@ -11,12 +11,12 @@ export const Menu = (): JSX.Element => {
 
     return (
         <>
-            <div className='menu-area'>
-                <button className='menu-button' onClick={toggleIsOpen}>
+            <div className='menuArea'>
+                <button className='menuButton' onClick={toggleIsOpen}>
                     menu
                 </button>
 
-                <div className={isOpen ? 'opened-menu' : 'closed-menu'}>
+                <div className={isOpen ? 'openedMenu' : 'closedMenu'}>
                     <ul>
                         <li>
                             <Link to={'/'}>go to root</Link>

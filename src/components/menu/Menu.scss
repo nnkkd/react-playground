@@ -1,18 +1,28 @@
 
 
-.closed-menu {
+.closedMenu {
     display: none;
 }
 
-.menu-button {
+.menuButton {
     height: 10vmin;
 }
 
-.menu-area {
+.menuArea {
     display: block;
-    .opened-menu {
-        display: block;
-        position: absolute;
-        background-color: #282c34;
+}
+
+.openedMenu {
+    display: block;
+    position: absolute;
+    background-color: #282c34;
+    a {
+        color: white;
+        &:hover {
+            color: skyblue;
+        }
+    }
+    li {
+        list-style: none;
     }
 }
