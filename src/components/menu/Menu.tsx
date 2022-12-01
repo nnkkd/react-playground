@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Menu.scss'
+import styles from './Menu.module.scss'
 import { Link } from 'react-router-dom'
 
 export const Menu = (): JSX.Element => {
@@ -16,7 +16,7 @@ export const Menu = (): JSX.Element => {
                     menu
                 </button>
 
-                <div className={isOpen ? 'openedMenu' : 'closedMenu'}>
+                <div className={isOpen ? styles.openedMenu : styles.closedMenu}>
                     <ul>
                         <li>
                             <Link to={'/'}>go to root</Link>
