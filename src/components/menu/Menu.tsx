@@ -12,7 +12,7 @@ export const Menu = (): JSX.Element => {
     return (
         <>
             <div className='menuArea'>
-                <button className='menuButton' onClick={toggleIsOpen}>
+                <button className={styles.menuButton} onClick={toggleIsOpen}>
                     menu
                 </button>
 
@@ -23,6 +23,9 @@ export const Menu = (): JSX.Element => {
                         </li>
                         <li>
                             <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
+                        </li>
+                        <li>
+                            <Link to={'/useContext'}>go to useContext playground</Link>
                         </li>
                         <li>
                             <Link to={'/form'}>go to form</Link>
