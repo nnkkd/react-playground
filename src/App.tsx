@@ -15,7 +15,7 @@ function App(): JSX.Element {
                 <Route path={'/useContext'} element={<UseContext />}></Route>
                 <Route path={'/form'} element={<Form />}></Route>
                 <Route path={'/todo'} element={<ToDo />}></Route>
-                <Route path={'/useReduce'} element={<UseReducer />}></Route>
+                <Route path={'/useReducer'} element={<UseReducer />}></Route>
             </Routes>
         </BrowserRouter>
     )
