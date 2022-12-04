@@ -5,6 +5,7 @@ import { UseStateEffect } from './pages/UseStateEffect'
 import { Form } from './pages/Form'
 import { ToDo } from './pages/ToDo'
 import UseContext from './pages/UseContext'
+import { UseReducer } from './pages/UseReducer'
 function App(): JSX.Element {
     return (
         <BrowserRouter>
@@ -14,6 +15,7 @@ function App(): JSX.Element {
                 <Route path={'/useContext'} element={<UseContext />}></Route>
                 <Route path={'/form'} element={<Form />}></Route>
                 <Route path={'/todo'} element={<ToDo />}></Route>
+                <Route path={'/useReduce'} element={<UseReducer />}></Route>
             </Routes>
         </BrowserRouter>
     )

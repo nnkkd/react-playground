@@ -7,8 +7,12 @@ export const Home = (): JSX.Element => {
     return (
         <>
             <Layout title='toppage'>
-                {PAGES.map((x) => {
-                    return <Link to={x.uri}>{x.name}</Link>
+                {PAGES.map((x, i) => {
+                    return (
+                        <Link key={i} to={x.uri}>
+                            {x.name}
+                        </Link>
+                    )
                 })}
             </Layout>
         </>

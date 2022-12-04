@@ -19,10 +19,12 @@ export const Menu = (): JSX.Element => {
 
                 <div className={isOpen ? styles.openedMenu : styles.closedMenu}>
                     <ul>
-                        {PAGES.map((x) => {
+                        {PAGES.map((x, i) => {
                             return (
-                                <li>
-                                    <Link to={x.uri}>{x.name}</Link>
+                                <li key={i}>
+                                    <Link key={i} to={x.uri}>
+                                        {x.name}
+                                    </Link>
                                 </li>
                             )
                         })}
