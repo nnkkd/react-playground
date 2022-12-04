@@ -1,0 +1,32 @@
+
+
+.closedMenu {
+    display: none;
+}
+
+.menuButton {
+    height: 10vmin;
+    border: 0;
+    border-color: white;
+    color: white;
+    background-color: #282c34;
+}
+
+.menuArea {
+    display: block;
+}
+
+.openedMenu {
+    display: block;
+    position: absolute;
+    background-color: #282c34;
+    a {
+        color: white;
+        &:hover {
+            color: skyblue;
+        }
+    }
+    li {
+        list-style: none;
+    }
+}

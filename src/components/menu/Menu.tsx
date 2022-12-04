@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Menu.scss'
+import styles from './Menu.module.scss'
 import { Link } from 'react-router-dom'
 
 export const Menu = (): JSX.Element => {
@@ -11,18 +11,21 @@ export const Menu = (): JSX.Element => {
 
     return (
         <>
-            <div className='menu-area'>
-                <button className='menu-button' onClick={toggleIsOpen}>
+            <div className='menuArea'>
+                <button className={styles.menuButton} onClick={toggleIsOpen}>
                     menu
                 </button>
 
-                <div className={isOpen ? 'opened-menu' : 'closed-menu'}>
+                <div className={isOpen ? styles.openedMenu : styles.closedMenu}>
                     <ul>
                         <li>
                             <Link to={'/'}>go to root</Link>
                         </li>
                         <li>
                             <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
+                        </li>
+                        <li>
+                            <Link to={'/useContext'}>go to useContext playground</Link>
                         </li>
                         <li>
                             <Link to={'/form'}>go to form</Link>

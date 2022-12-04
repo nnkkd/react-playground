@@ -49,9 +49,9 @@ export const SomeForm = (): JSX.Element => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <StringValueInput label='string-value' register={register} />
-            {(errors['string-value']?.message ?? '') && <p className='error-message'> {errors['string-value']?.message}</p>}
+            {(errors['string-value']?.message ?? '') && <p className='errorMessage'> {errors['string-value']?.message}</p>}
             <NumberValueInput label='number-value' register={register} />
-            {(errors['number-value']?.message ?? '') && <p className='error-message'> {errors['number-value']?.message}</p>}
+            {(errors['number-value']?.message ?? '') && <p className='errorMessage'> {errors['number-value']?.message}</p>}
             <input type='submit' />
         </form>
     )
