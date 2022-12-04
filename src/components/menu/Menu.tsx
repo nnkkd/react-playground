@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './Menu.module.scss'
 import { Link } from 'react-router-dom'
+import { PAGES } from '../../shared/pages'
 
 export const Menu = (): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -18,21 +19,13 @@ export const Menu = (): JSX.Element => {
 
                 <div className={isOpen ? styles.openedMenu : styles.closedMenu}>
                     <ul>
-                        <li>
-                            <Link to={'/'}>go to root</Link>
-                        </li>
-                        <li>
-                            <Link to={'/useState-effect'}>go to useState,Effect playground</Link>
-                        </li>
-                        <li>
-                            <Link to={'/useContext'}>go to useContext playground</Link>
-                        </li>
-                        <li>
-                            <Link to={'/form'}>go to form</Link>
-                        </li>
-                        <li>
-                            <Link to={'/todo'}>go to todo</Link>
-                        </li>
+                        {PAGES.map((x) => {
+                            return (
+                                <li>
+                                    <Link to={x.uri}>{x.name}</Link>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
