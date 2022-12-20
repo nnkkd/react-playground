@@ -7,7 +7,7 @@ export const Header = (): JSX.Element => {
         <header className='App-header'>
             <Menu />
             <img src={logo} className='App-logo' alt='logo' />
-            this is header
+            my react playground
         </header>
     )
 }
