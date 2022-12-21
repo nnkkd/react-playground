@@ -1,3 +1,3 @@
 # react-playground
 
-reactで困ったときに実験するための場所
+react/nestjsで困ったときに実験するための場所
