@@ -8,10 +8,10 @@ services:
     # (this is just an example, not intended to be a production configuration)
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_ROOT_PASSWORD: example
-    volumes:
-      - ./db:/var/lib/mysql
-
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myApp
+    ports:
+      - 3306:3306
   adminer:
     image: adminer
     ports:
